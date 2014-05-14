@@ -36,6 +36,8 @@
 # 2. Initial Solution
 
 def sentence_maker(array)
+	array[0].capitalize
+	array.push(".")
 	array.join(" ")
 end
 
