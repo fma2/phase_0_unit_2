@@ -49,7 +49,20 @@ end
 
 # 3. Refactored Solution
 
-
+def get_grade(array)
+average = (array.inject(:+) / array.length)
+	if average >= 90
+		"A"
+	elsif average >= 80
+		"B"
+	elsif average >= 70
+		"C"
+	elsif average >= 60
+		"D"
+	else 
+		"F"
+	end
+end
 
 
 # 4. Reflection 
