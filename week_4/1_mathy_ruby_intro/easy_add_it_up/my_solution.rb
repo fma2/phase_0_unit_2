@@ -35,6 +35,21 @@
 
 # 2. Initial Solution
 
+def total(array)
+	sum = 0
+	array.inject(0) {|sum, i| sum + i}
+
+end
+
+puts total([1,2,3]
+
+
+def sentence_maker((array))
+	array.join(" ")
+end
+
+sentence_maker(["i", "want", "to", "go", "to", "the", "movies"])
+
 
 # 3. Refactored Solution
 
