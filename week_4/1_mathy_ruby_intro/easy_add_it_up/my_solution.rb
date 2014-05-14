@@ -44,7 +44,7 @@ end
 puts total([1,2,3]
 
 
-def sentence_maker((array))
+def sentence_maker(array)
 	array.join(" ")
 end
 
