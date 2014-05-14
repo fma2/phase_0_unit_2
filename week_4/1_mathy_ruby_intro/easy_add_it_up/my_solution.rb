@@ -54,6 +54,4 @@ def total(array)
 	array.inject {|sum, i| sum + i}
 end
 
-total(1,2,3)
-
 # 4. Reflection 
