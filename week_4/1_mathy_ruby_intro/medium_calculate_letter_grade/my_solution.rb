@@ -29,7 +29,22 @@
 
 # 2. Initial Solution
 
-
+def get_grade(array)
+	sum = 0
+	x = array.inject{|sum,x| sum + x } 
+  	y = x/array.length
+	if y >= 90
+		return "A"
+	elsif y >= 80
+		return "B"
+	elsif y >= 70; 
+		return "C"
+	elsif y >= 60
+		return "D"
+	else 
+		return "F"
+	end
+end
 
 
 # 3. Refactored Solution
