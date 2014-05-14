@@ -46,10 +46,14 @@ def total(array)
 end
 
 
-
-
 # 3. Refactored Solution
 
+# Do you need #inject(0) if sum already established?
+def total(array)
+	sum = 0
+	array.inject {|sum, i| sum + i}
+end
 
+total(1,2,3)
 
 # 4. Reflection 
