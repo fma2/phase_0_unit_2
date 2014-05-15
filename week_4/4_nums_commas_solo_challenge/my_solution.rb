@@ -7,12 +7,15 @@
 
 # 1. Pseudocode
 
-# What is the input?
+# What is the input? 
+# a number 
+
 # What is the output? (i.e. What should the code return?)
 # What are the steps needed to solve the problem?
 
 
 # 2. Initial Solution
+
 
 
 
