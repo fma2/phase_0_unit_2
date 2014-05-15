@@ -16,10 +16,11 @@
 # What is the output? (i.e. What should the code return?)
 # What are the steps needed to solve the problem?
 
+# Define class Array
+# Define method "pad"
+# Method takes parameters 
 
 # 2. Initial Solution
-
-object.pad = 
 
 
 
