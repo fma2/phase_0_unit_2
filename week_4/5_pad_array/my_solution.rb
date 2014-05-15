@@ -4,7 +4,11 @@
 # include it in this file. Also make sure everything that isn't code
 # is commented in the file.  
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [by myself.
+
+# DIRECTIONS
+# Implement Array#pad and Array#pad!. Each method accepts a minimum size (non-negative integer) and an optional pad value as arguments.
+# If the array's length is less than the minimum size, Array#pad should return a new array padded with the pad value up to the minimum size.
 
 # 1. Pseudocode
 
@@ -15,6 +19,7 @@
 
 # 2. Initial Solution
 
+object.pad = 
 
 
 
