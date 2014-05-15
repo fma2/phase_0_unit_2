@@ -13,9 +13,10 @@ i_want_pets = ["I", "want", 3, "pets", "but", "I", "only", "have", 2]
 # Use method #delete_if to delete elements in array that do not have the letter, use #match method
 
 def my_array_finding_method(array, letter)
-	array.delete_if {|word| word.class != String}
-  	array.delete_if {|word| word.match(letter) == nil }
-  	return array
+	array2 = array.clone
+	array2.delete_if {|word| word.class != String}
+  	array2.delete_if {|word| word.match(letter) == nil }
+  	return array2
  end
 
 # PSEUDOCODE
@@ -25,8 +26,9 @@ def my_array_finding_method(array, letter)
 # Lists pets in order by age
 
 def my_hash_finding_method(hash, number)
-	hash.delete_if {|key, value| value != number }
-	hash.keys
+	hash2 = hash.clone
+	hash2.delete_if {|key, value| value != number }
+	hash2.keys
 end
 
 # Identify and describe the ruby method you implemented. 
@@ -87,6 +89,7 @@ end
 
 p my_array_finding_method(i_want_pets, "t") == ["want","pets","but"]
 p my_hash_finding_method(my_family_pets_ages, 3) == ["Hoobie", "Ditto"]
+print i_want_pets
 p my_array_modification_method(i_want_pets, 1) == ["I", "want", 4, "pets", "but", "I", "only", "have", 3 ]
 p my_hash_modification_method(my_family_pets_ages, 2) == {"Evi" => 8, "Hoobie" => 5, "George" => 14, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}
 p my_array_sorting_method(i_want_pets) == ["3", "4", "I", "but", "have", "only", "pets", "want"]
