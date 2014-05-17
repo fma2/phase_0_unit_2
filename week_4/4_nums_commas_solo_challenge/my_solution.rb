@@ -15,37 +15,35 @@
 
 # What are the steps needed to solve the problem?
 
-#Create method "separate_comma" with takes "number" as argument
-# Use .to_s to make number a string  sample: ["100000"]
-# Use .chars to separate each character in the string into an array ["1", "0","0","0","0","0",]
-# Reverse numbers in array ["0","0","0","0","0", "1"]
-# Slice the new array into 3 [["0","0","0"]["0","0", "1"]
-# Map for every three, joining them [["000"],["001"]]
-# Join groups of three with comma ["000,001"]
-# Reverse back ["100,000"]
+# Create method "separate_comma" with takes "number" as argument
+# Define variable x to be the number turned into a string and split into an array
+# Define variable y to return the size of x
+# Define if statement, if y < 4, print number as string
+# Else
+	# Reverse numbers in array ["0","0","0","0","0", "1"]
+	# Slice the new array into 3 [["0","0","0"]["0","0", "1"]
+	# Map for every three, joining them [["000"],["001"]]
+	# Join groups of three with comma ["000,001"]
+	# Reverse back ["100,000"]
 
 
 # 2. Initial Solution
 
-
-# def separate_comma(number)
-# 	number.to_s
-# 	number.chars.to_a
-# 	number.reverse
-# 	number.each_slice(3)
-# 	number.map(&:join) #How does this work?
-# 	number.join(",")
-# 	number.reverse
-# end
-
-# def separate_comma(number)
-#    number.to_s.split(//).reverse.each_slice(3).map(&:join).join(",").reverse
-# end
+def separate_comma(number)
+	x = number.to_s.split('')
+	y = x.size
+	if y < 4
+		p number.to_s
+	else 
+		reversed_string = x.reverse
+		sliced_string = reversed_string.each_slice(3)
+		mapped_string = sliced_string.map(&:join)
+		joined_string = mapped_string.join(",")
+		p joined_string.reverse
+	end
+end
 
 # 3. Refactored Solution
-# def separate_comma(number)
-#    number.to_s.chars.to_a.reverse.each_slice(3).map(&:join).join(",").reverse
-# end
 
 
 
