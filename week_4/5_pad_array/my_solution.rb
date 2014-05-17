@@ -20,7 +20,7 @@
 # Define method "pad!" # MAYBE ADJUST THIS???
 # Method takes parameters pad_size and value = nil
 # Define variable x as pad_size minus the count of elements in the array
-# Create loop for value to be added ad the end of self (the array) x number of times
+# Create loop for value to be added at the end of self (the array) x number of times
 # 
 # Define method "pad"
 # Clone self (the array)
@@ -29,7 +29,7 @@
 # 2. Initial Solution
 class Array
 def pad!(pad_size, pad_item = nil)
-	x = pad_size - self.count #take the argument and subtract the count from it.
+	x = pad_size - self.count
 	x.times do
     	self << value
     end
