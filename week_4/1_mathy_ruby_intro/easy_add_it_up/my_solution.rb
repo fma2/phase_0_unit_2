@@ -36,10 +36,8 @@
 # 2. Initial Solution
 
 def sentence_maker(array)
-	array[0].capitalize
-	array.push(".")
-	array.join(" ")
-end
+	array.join(" ").capitalize << "."
+end 
 
 
 def total(array)
@@ -50,10 +48,13 @@ end
 
 # 3. Refactored Solution
 
-# Do you need #inject(0) if sum already established?
 def total(array)
 	sum = 0
 	array.inject {|sum, i| sum + i}
 end
+
+def sentence_maker(array)
+	array.join(" ").capitalize << "."
+end 
 
 # 4. Reflection 
