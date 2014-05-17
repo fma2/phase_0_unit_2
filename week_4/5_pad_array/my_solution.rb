@@ -43,6 +43,16 @@ end
 
 # 3. Refactored Solution
 
-
+class Array
+	def pad!(pad_size, pad_item = nil)
+		while  pad_size > length
+			self << pad_item
+		end
+		self
+	end
+	def pad(pad_size, pad_item = nil)
+		self.clone.pad!(pad_size, pad_item)
+	end
+end
 
 # 4. Reflection 
