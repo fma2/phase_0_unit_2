@@ -45,6 +45,13 @@ end
 
 # 3. Refactored Solution
 
-
+def separate_comma(number)
+	x = number.to_s.split('')
+	if x.size < 4
+		number.to_s
+	else 
+		x.reverse.each_slice(3).map(&:join).join(",").reverse
+	end
+end
 
 # 4. Reflection 
