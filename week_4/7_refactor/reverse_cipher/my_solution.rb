@@ -39,12 +39,12 @@ end
 # 5. Are there any other methods you want to understand better? #zip and its uses in other situations
 # 6. Does this code look better or worse than your refactored solution 
 #    of the original cipher code? What's better? What's worse? 
-    #Better 
+    #Better
 # 7. Is this good code? What makes it good? What makes it bad?
     #Good code once you understand the methods  
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
-# Does this return the same thing every time?
+# Does this return the same thing every time? #No it does not, because of the #sample method
 p translate_to_cipher("I want cookies")
 p translate_to_cipher("I want cookies")
 p translate_to_cipher("I want cookies")
@@ -55,4 +55,8 @@ p translate_to_cipher("I want cookies")
 
 
 # 5. Reflection 
+# #Like Challenge 6, it was enlightening to go through the provided code line by line.  Specifically, as a new programmer, I like to see (1) what Ruby is capable of and (2) how good code is written.  And, as a teacher, I really believe in the value of modeling.  Being able to see examples of simple Ruby programs serves, in part, as a model--I hope when Phase 1 begins I will see modeling (of good code, of how to think about code/metacognition, etc.) in the DBC classroom, as well.  
 
+# With this challenge’s code, the new methods I learned were #sample, Hash, #zip, and #each_char.  With #zip, I understand how it is used in the provided code but am not able to think of a real-life example of when I could use it in the future.  
+
+# Whether or not the code follows good practices is a concept I am still learning.  However, my pair and I felt this code was well-written.  One reflection on refactored code as a new programmer is on its readability.  It seems refactored code is harder to read to see what is actually happening.  When its parsed out (either via conversation or when I’ve typed some of it out to make sense of what is happening), its clearer.  While an experienced programmer should be refactoring and a new programmer should get in the habit of it, I’m convinced I should focus on it to make it consistent in my code-writing process, rather than making myself upset if I’m not able to do it quickly and well on my own.  I would rather become effective with writing the initial code and with knowing what is happening with the code.  
