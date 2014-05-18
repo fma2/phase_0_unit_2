@@ -132,5 +132,11 @@ p north_korean_cipher("syv%ryoiw#evi#liph^xskixliv@fc^kveti-jpezsvih@xsjjii.*hsr
 p north_korean_cipher("mj^csy&qeoi^sri*qmwxeoi,%kir.*vm@csrk-kmp,&csy^ampp*fi&vitpegih*fc@hirrmw&vshqer.") == "if you make one mistake, gen. ri yong-gil, you will be replaced by dennis rodman."
 p north_korean_cipher("ribx^wxst:$wsyxl%osvie,$xlir$neter,#xlir%xli%asvph!") == "next stop: south korea, then japan, then the world!"
 p north_korean_cipher("ger^wsqifshc*nywx^kix^qi&10000*fekw@sj$gssp%vergl@hsvmxsw?") == "can somebody just get me 100 bags of cool ranch doritos?"
-# Reflection
+# # Reflection
+
+# With my pair, it was enlightening to go through the provided code line by line.  It helped to articulate what I thought I saw happening and to hear another Boot explain how they interpreted it.  I had seen or used most of the methods in the code save for #sample, Hash, #zip, and #each_char.  Of the new methods, my pair and I spent time discussing #zip--I understood how it was used in the provided code but was not able to think of a real-life example of when I would use it in the future.  
+
+# We spent half of our pairing session describing what the code was doing and the other half refactoring.  Unlike other pairing sessions I have participated in, we discussed how we would refactor the cipher hash before taking on driver and navigator roles.  I liked this process, as it ensured both of us were on the same page once we started working on the code; it opened a channel of clear communication.  
+
+# I can see there are a few other aspects of the code that could be refactored.  I look forward to when I am able to do this more efficiently, when I am familiar with many more (if not all) Ruby methods, can easily spot aspects of a piece of code that need refactoring, and can immediately make changes.  
  
