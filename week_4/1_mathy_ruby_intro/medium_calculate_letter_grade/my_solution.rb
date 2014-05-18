@@ -66,3 +66,4 @@ end
 
 
 # 4. Reflection 
+#There was a similar challenge to this one in the Ruby Labs Exercises.  I did not realize it until I started coding.  However, because I was able to write the initial code with ease, I gave more attention to refactoring.  Interestingly, when I find a challenge difficult, I notice that I test my code so often when writing initial code that I end up simplifying in that step; I find it difficult to refactor later on.  However, when I am able to easily pseudocode and code a challenge, the code consistently needs quite a bit of refactoring.  This was the case for this challenge; to complete this step, I think I need more examples of refactoring -- both with the before code and the after-refactored code.
