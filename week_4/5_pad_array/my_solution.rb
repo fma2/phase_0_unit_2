@@ -56,3 +56,8 @@ class Array
 end
 
 # 4. Reflection 
+#For this challenge, I found the directions confusing.  I had to ask a software engineer friend about how they interpreted the direction to “implement Array#pad and Array#pad!”.  He suggested I look into Ruby classes.  In researching this, I read a few articles about it, but, without fully understanding classes conceptually, I had seen enough examples of classes to get started.  
+
+# Notably, once I knew I needed to make a method, the challenge’s directions helped me start with basic pseudocode.  Turning the pseudocode into code involved understanding “self” in the method--I don’t think I understand how it works completely, but I appreciate having this challenge to at least begin to understand this seemingly complicated aspect of Ruby.  
+
+# I’m not sure if my refactored solution makes the code that much simpler -- it just uses a “while” loop instead.  I wonder, in a more complicated program, how much of a difference this small change would make.  
