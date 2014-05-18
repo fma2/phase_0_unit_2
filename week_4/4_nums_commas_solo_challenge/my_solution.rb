@@ -55,3 +55,6 @@ def separate_comma(number)
 end
 
 # 4. Reflection 
+# #I had trouble getting started on this challenge, but I think it paid off in the end.  In considering how to add commas to an integer, I began with turning it into a string, as the directions asked that the final output be in a string.  After turning it into a string, I needed to parse it out into a array to make space for necessary commas.  It seemed counting backwards in threes was more reliable, so I opted to reverse the array.  It was useful that I had learned so much through Challenge 3, as I was able to use many of the methods I learned in this challenge.  
+
+# In my Initial Solution, I created many new variables.  In moving to refactor, I was not sure how to proceed until another Boot posted an article about functional programming.  It also helped that I was also in the middle of researching for this week’s technical blog.  It was enlightening to realize how Ruby is known for clean code.  
