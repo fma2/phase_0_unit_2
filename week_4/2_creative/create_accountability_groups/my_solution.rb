@@ -104,29 +104,23 @@ print create_accountability_groups(dbc_newts) # unit 3
 # test if output has the total
 # test for repeated?
 
-def test_group_size(test_members)
- 	 groups = create_accountability_groups(test_members)
- 	 groups.each { |group| group.count == 6}
-end
+dbc_test = dbc_newts.shuffle.slice(0,4)
+puts create_accountability_groups(dbc_newts) == dbc_test #This returns random groups thus will often return false
 
-p test_group_size(dbc_newts) == true
-
-def test_whole_group(test_members)
-	whole_group = create_accountability_groups(test_members)
-	whole_group = 24
-end
-
-p test_whole_group(dbc_newts) == true
-        
+# PRACTICE/TESTING OUT CODE
+# def test_group_size(test_members)
+#  	 groups = create_accountability_groups(test_members)
+#  	 groups.each { |group| group.count == 4}
 # end
 
-# describe 'testing_get_group' do
-# 	let {:groupA} {}
-# 	let {:groupB} {}
-# 	let {:groupC} {}
+# p test_group_size(dbc_newts) == true
 
+# def test_whole_group(test_members)
+# 	whole_group = create_accountability_groups(test_members)
+# 	whole_group = 24
+# end
 
-
+# p test_whole_group(dbc_newts) == true
 
 # 5. Reflection 
 ## I completed this challenge after Challenge 3, so I knew how to look up methods on Ruby Documentation when I needed help.  In writing the Initial Code, I chose not to use loops in an effort to practice refactoring.  In due course, my initial solution repeats quite a bit of the same code.  It was great to be able to get this visual; a loop could be as little as one line of code but is powerful enough to execute quite a bit at once. 
