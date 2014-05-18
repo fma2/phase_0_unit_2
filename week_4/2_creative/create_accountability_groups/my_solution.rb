@@ -126,5 +126,6 @@ print create_accountability_groups(dbc_newts) # unit 3
 
 # I think I met the learning competencies in changing my initial code to refactored code.  I took an un-automated repetitive task and made it automated.  Further, my initial code only made groups for one unit, not three, and, in automating it for the refactored code, I was able to make groups for 3 groups.  In doing this, I realized that I couldn’t just loop what I had in my initial code, as it includes deletion of names.  I had to make clones of the members to be used in each loop as well as a new variable to hold these groups.
 # 
-# 
+# Finally, I need to research more lessons or videos on how to write driver code.  For this challenge, I viewed the other challenges’ driver code files for help; it would help to know and have practice with a process or best practices in creating driver code. 
+
 
