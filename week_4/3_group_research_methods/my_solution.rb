@@ -97,9 +97,13 @@ p my_hash_sorting_method(my_family_pets_ages) == [["Annabelle", 2], ["Ditto", 5]
 p my_array_deletion_method(i_want_pets, "a") == ["I", 4, "pets", "but", "I", "only", 3 ]
 p my_hash_deletion_method(my_family_pets_ages, "George") == {"Evi" => 8, "Hoobie" => 5, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}
 
-# Reflect!
-# 
-# 
-# 
+# # # Reflect!
+# # In this challenge, I served as Person 1.  First, I enjoyed learning how to read Ruby Documentation. I admittedly did not know how to use it before this challenge demanded it; I wish it had been required in previous weeks.  I spent so much time Googling questions I had, as I did not realize there was a single website with most, if not all, the information I need about Ruby.  
+
+# My task as Person 1 was to write code to find matching data.  While I was able to find Ruby methods that locate a character in a string and return the character, I did not find a method that locates a character in a string and return the whole string.  Instead, I used the delete_if method.  When I realized that it would delete elements in the original array and hash, I added a method to clone the array and hash.  This saved the results of the methods into a new variable, ensuring that my methods do not affect my group’s ability to work with the array and hash.  
+
+# Overall, this challenge led me to thoroughly consider methods available for arrays, strings, and hashes.  I learned quite a bit about Ruby’s capabilities through this exercise.  
+
+# Further, though the challenge did not ask for pseudocode, I find it interesting that I still needed to write it -- it’s becoming more natural, and I find I need it to do it before wasting time typing out code that does not work.  
 # 
 # 
