@@ -104,12 +104,19 @@ print create_accountability_groups(dbc_newts) # unit 3
 # test if output has the total
 # test for repeated?
 
-# def test_group(test_members)
-# 	 groups = create_accountability_groups(test_members)
-# 	 # test groups is valid
-# 	 # all_members
-# 	 for group in groups:
-# 	 	group.size() == 4
+def test_group_size(test_members)
+ 	 groups = create_accountability_groups(test_members)
+ 	 groups.each { |group| group.count == 6}
+end
+
+p test_group_size(dbc_newts) == true
+
+def test_whole_group(test_members)
+	whole_group = create_accountability_groups(test_members)
+	whole_group = 24
+end
+
+p test_whole_group(dbc_newts) == true
         
 # end
 
