@@ -49,9 +49,13 @@ class GuessingGame
   end
 
   def solved?
-  	
+  	@solved = @guess
+  	if @guess == @answer
+  		true
+  	else 
+  		false
+  	end
   end
-
 end
 
 game = GuessingGame.new(10)
@@ -61,20 +65,48 @@ p game.guess(20) # => :high
 
 # 4. Refactored Solution
 
+class GuessingGame
+  def initialize(answer)
+  	@answer = answer
+  end
+
+  def guess(guess)
+  	@guess = guess
+  	if @guess > @answer
+  		return :high
+  	elsif @guess == @answer
+  		return :correct
+  	else
+  		return :low
+  	end
+  end
+
+  def solved?
+  	@solved = @guess
+  	if @guess == @answer
+  		true
+  	else 
+  		false
+  	end
+  end
+end
 
 
 
 
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
-#"returns :high when the guess is too high"
-# game.guess(100) == :high
 
-# # "returns :low when the guess is too low" do
-# game.guess(0) == :low
+game = GuessingGame.new(10)
 
-# # "returns :correct when the guess is correct" do
-# game.guess(10) == :correct
+# "returns :high when the guess is too high"
+p game.guess(100) == :high
+
+# "returns :low when the guess is too low" do
+p game.guess(0) == :low
+
+# "returns :correct when the guess is correct" do
+p game.guess(10) == :correct
 
 
 
