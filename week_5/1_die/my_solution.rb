@@ -65,10 +65,15 @@ end
 
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
+# Check to see if >1 because raises an argument error if 0
+p die.roll >= 1
+
+# Check to see if >1 because raises an argument error if 0
+p die.roll != 0
+
+# Returns number of sides
 die = Die.new(200)
 	p die.sides == 200
-p die.roll != 0
-p die.roll >= 1
 
 
 
