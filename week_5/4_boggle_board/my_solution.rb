@@ -16,14 +16,11 @@ boggle_board = [["b", "r", "a", "e"],
     coords.map { |coord| board[coord.first][coord.last]}.join("")
   end
 
-<<<<<<< HEAD
 # Initial Solution
   def create_word(board, *coords)
     coords.map { |coord| board[coord.first][coord.last]}.join("")
   end
 
-=======
->>>>>>> FETCH_HEAD
   puts create_word(boggle_board, [2,1], [1,1], [1,2], [0,3])  #=> returns "code"  
   puts create_word(boggle_board, [0,1], [0,2], [1,2])  #=> creates what california slang word?
 
@@ -45,11 +42,11 @@ boggle_board = [["b", "r", "a", "e"],
 
 # Initial Solution
 
-def get_row(board, row)
-	return board[row]
-end
+# def get_row(board, row)
+# 	return board[row]
+# end
 
-p get_row(boggle_board, 1)
+# p get_row(boggle_board, 1)
 
 # Refactored Solution
 
@@ -80,20 +77,23 @@ p get_row(boggle_board, 3) == ["t", "a", "k", "e"]
 
 # Initial Solution
 
-def get_column(board, column_number)
-	board.map {|element| p element[column_number]}
-end
+# def get_column(board, column_number)
+# 	board.map {|element| p element[column_number]}
+# end
 
-p get_column(boggle_board, 0)
+# p get_column(boggle_board, 0)
 
 # Refactored Solution
 
 def get_column(board, column_number)
-	board.map {|element| p element[column_number]}
+	board.map {|element| element[column_number]}
 end
 
 
 # DRIVER TESTS GO BELOW THIS LINE
-
+p get_column(boggle_board, 0) == ["b", "i", "e", "t"]
+p get_column(boggle_board, 1) == ["r", "o", "c", "a"]
+p get_column(boggle_board, 2) == ["a", "d", "l", "k"]
+p get_column(boggle_board, 3) == ["e", "t", "r", "e"]
 
 # Reflection 
