@@ -57,4 +57,6 @@ def sentence_maker(array)
 	array.join(" ").capitalize << "."
 end 
 
-# 4. Reflection 
+# # 4. Reflection 
+
+# While reacquainting myself with Ruby, I found it helpful to use IRB in the command line to test out different methods for this challenge.  To practice methods, I referred to the information and exercises in the Ruby Labs and Exercises from pre-Phase 0.  I found it was easy to try a method by itself, but, in considering the order of methods to meet the requirements for this challenge, I had to test my code quite a bit.  I imagine this challenge is meant to be simple, so I am slightly disappointed in myself for spending so much time on it.  I hope it was related to my need to relearn the various methods in Ruby.

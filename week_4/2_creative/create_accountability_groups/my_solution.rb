@@ -104,23 +104,28 @@ print create_accountability_groups(dbc_newts) # unit 3
 # test if output has the total
 # test for repeated?
 
-# def test_group(test_members)
-# 	 groups = create_accountability_groups(test_members)
-# 	 # test groups is valid
-# 	 # all_members
-# 	 for group in groups:
-# 	 	group.size() == 4
-        
-# end
+dbc_test = dbc_newts.shuffle.slice(0,4)
+puts create_accountability_groups(dbc_newts) == dbc_test #This returns random groups thus will often return false
 
-# describe 'testing_get_group' do
-# 	let {:groupA} {}
-# 	let {:groupB} {}
-# 	let {:groupC} {}
+def test_group_size(test_members)
+ 	 groups = create_accountability_groups(test_members)
+ 	 groups.each { |group| group.count == 4}
+end
 
+p test_group_size(dbc_newts) == true
 
+def test_whole_group(test_members)
+	whole_group = create_accountability_groups(test_members)
+	whole_group = 24
+end
 
+p test_whole_group(dbc_newts) == true
 
 # 5. Reflection 
+## I completed this challenge after Challenge 3, so I knew how to look up methods on Ruby Documentation when I needed help.  In writing the Initial Code, I chose not to use loops in an effort to practice refactoring.  In due course, my initial solution repeats quite a bit of the same code.  It was great to be able to get this visual; a loop could be as little as one line of code but is powerful enough to execute quite a bit at once. 
+
+# I think I met the learning competencies in changing my initial code to refactored code.  I took an un-automated repetitive task and made it automated.  Further, my initial code only made groups for one unit, not three, and, in automating it for the refactored code, I was able to make groups for 3 groups.  In doing this, I realized that I couldn’t just loop what I had in my initial code, as it includes deletion of names.  I had to make clones of the members to be used in each loop as well as a new variable to hold these groups.
+# 
+# Finally, I need to research more lessons or videos on how to write driver code.  For this challenge, I viewed the other challenges’ driver code files for help; it would help to know and have practice with a process or best practices in creating driver code. 
 
 
