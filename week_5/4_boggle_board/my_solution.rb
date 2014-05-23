@@ -23,6 +23,7 @@ boggle_board = [["b", "r", "a", "e"],
 #see above
 # DRIVER TESTS GO BELOW THIS LINE
 # Reflection 
+#NO LONGER PART 1
 
 #-------------------------------------------------------------------------------
 
@@ -31,7 +32,7 @@ boggle_board = [["b", "r", "a", "e"],
 # Pseudocode
 
 # Define method get_row to take two arguments: board & row
-# Method returns board[row]
+# Method returns board[row], where board is the array at which the method is looking, and row is the index that of that array that should be returned
 # End method
 
 # Initial Solution
@@ -44,13 +45,19 @@ p get_row(boggle_board, 1)
 
 # Refactored Solution
 
-#see above
+def get_row(board, row)
+	return board[row]
+end
 
 # DRIVER TESTS GO BELOW THIS LINE
 
+p get_row(boggle_board, 0) == ["b", "r", "a", "e"]
+p get_row(boggle_board, 1) == ["i", "o", "d", "t"]
+p get_row(boggle_board, 2) == ["e", "c", "l", "r"]
+p get_row(boggle_board, 3) == ["t", "a", "k", "e"]
+
 
 # Reflection 
-
 
 
 #-------------------------------------------------------------------------------
@@ -59,10 +66,23 @@ p get_row(boggle_board, 1)
 
 # Pseudocode
 
+# Define method get_column to take two arguments: board & column_number
+# #map board, to go through each array and print the element found in the column
+# End method
+
 # Initial Solution
 
+def get_column(board, column_number)
+	board.map {|element| p element[column_number]}
+end
+
+p get_column(boggle_board, 0)
 
 # Refactored Solution
+
+def get_column(board, column_number)
+	board.map {|element| p element[column_number]}
+end
 
 
 # DRIVER TESTS GO BELOW THIS LINE
