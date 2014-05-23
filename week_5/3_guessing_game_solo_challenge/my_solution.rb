@@ -32,35 +32,35 @@
 
 # 3. Initial Solution
 
-class GuessingGame
-  def initialize(answer)
-  	@answer = answer
-  end
+# class GuessingGame
+#   def initialize(answer)
+#   	@answer = answer
+#   end
 
-  def guess(guess)
-  	@guess = guess
-  	if @guess > @answer
-  		return :high
-  	elsif @guess == @answer
-  		return :correct
-  	else @guess < @answer
-  		return :low
-  	end
-  end
+#   def guess(guess)
+#   	@guess = guess
+#   	if @guess > @answer
+#   		return :high
+#   	elsif @guess == @answer
+#   		return :correct
+#   	else @guess < @answer
+#   		return :low
+#   	end
+#   end
 
-  def solved?
-  	@solved = @guess
-  	if @guess == @answer
-  		true
-  	else 
-  		false
-  	end
-  end
-end
+#   def solved?
+#   	@solved = @guess
+#   	if @guess == @answer
+#   		true
+#   	else 
+#   		false
+#   	end
+#   end
+# end
 
-game = GuessingGame.new(10)
-p game.guess(5)  # => :low
-p game.guess(20) # => :high
+# game = GuessingGame.new(10)
+# p game.guess(5)  # => :low
+# p game.guess(20) # => :high
 
 
 # 4. Refactored Solution
@@ -73,11 +73,11 @@ class GuessingGame
   def guess(guess)
   	@guess = guess
   	if @guess > @answer
-  		return :high
+  		:high
   	elsif @guess == @answer
-  		return :correct
+  		:correct
   	else
-  		return :low
+  		:low
   	end
   end
 
