@@ -13,7 +13,12 @@ boggle_board = [["b", "r", "a", "e"],
 # Pseudocode
 
 # Initial Solution
+  def create_word(board, *coords)
+    coords.map { |coord| board[coord.first][coord.last]}.join("")
+  end
 
+  puts create_word(boggle_board, [2,1], [1,1], [1,2], [0,3])  #=> returns "code"  
+  puts create_word(boggle_board, [0,1], [0,2], [1,2])  #=> creates what california slang word?
 
 # Refactored Solution
 
