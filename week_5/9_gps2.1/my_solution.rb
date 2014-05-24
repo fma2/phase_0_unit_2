@@ -14,8 +14,7 @@ def bakery_num(num_of_people, fav_food)
   qty = {"pie" => 0, "cake" => 0, "cookie" => 0}
   # pie_qty, cake_qty, cookie_qty = 0, 0, 0
  
- raise ArgumentError.new("You can't make that food") if not ppl_per_food.include?(fav_food) #== true #needs to be rewritten
-
+ raise ArgumentError.new("You can't make that food") if not ppl_per_food.include?(fav_food)
   # has_fave = false
   ppl_per_food.each_key do |k|
     if k == fav_food
