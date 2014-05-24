@@ -1,14 +1,17 @@
 # U2.W5: Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge with Justin Lee.
 
 # EXPLANATION OF require_relative
 #
 #
-require_relative 'state_data'
-
+# EXPLANATION OF require_relative
+# This requires the pathname that is going to be run. This pathname is located in this directory.
+#
+# require_relative 'state_data'
+=begin
 class VirusPredictor
-
+  # This is initializing state of origin, population density, population, region, regional spread and defining instance variables for each.
   def initialize(state_of_origin, population_density, population, region, regional_spread)
     @state = state_of_origin
     @population = population
@@ -16,14 +19,19 @@ class VirusPredictor
     @region = region
     @next_region = regional_spread
   end
-
-  def virus_effects  #HINT: What is the SCOPE of instance variables?
+  
+  # This method, virus_effects, calls the methods predicted deaths and speed of spread.
+  def virus_effects  #HINT: What is the SCOPE of instance variables? #Works within this particular class
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
   end
 
-  private  #what is this?  what happens if it were cut and pasted above the virus_effects method
+  private  #what is this?  what happens if it were cut and pasted above the Virus_effects method 
+  # Code under private stays private and is not included in the Class unless a method calls it.  
+  # If its moved above virus_effects, there is an error: rb:73:in `block in <top (required)>': private method `virus_effects' called for #<VirusPredictor:0x000001013416e0> (NoMethodError)
 
+  # This method, predicted_deaths, takes arguments population_density, population, and state.  
+  # If @population density is greater than or equal to 200, then number_of_deaths is the @population times 0.4 rounded to the nearest integer.
   def predicted_deaths(population_density, population, state)
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -41,6 +49,9 @@ class VirusPredictor
 
   end
 
+  # This method, speed_of_spread, takes arguments population_density and state.
+  # Sets variable speed to 0.0.
+  # If @population_density is greater than or equal to 200, add 0.5 to speed
   def speed_of_spread(population_density, state) #in months
     speed = 0.0
 
@@ -61,12 +72,62 @@ class VirusPredictor
   end
 
 end
+=end
+
+#=======================================================================
+
+# Refactored Solution
+
+require_relative 'state_data'
+
+class VirusPredictor
+  def initialize(state_of_origin, population_density, population, region, regional_spread)
+    @state = state_of_origin
+    @population = population
+    @population_density = population_density
+    @region = region
+    @next_region = regional_spread
+  end
+  
+  def virus_effects  
+    predicted_deaths_and_speed_of_spread(@population_density, @population, @state)
+  end
+
+  private  
+  
+  def predicted_deaths_and_speed_of_spread(population_density, population, state)
+    speed = 0.0
+    if @population_density >= 200
+      number_of_deaths = (@population * 0.4).floor
+      speed += 0.5
+    elsif @population_density >= 150
+      number_of_deaths = (@population * 0.3).floor
+      speed += 1
+    elsif @population_density >= 100
+      number_of_deaths = (@population * 0.2).floor
+      speed += 1.5
+    elsif @population_density >= 50
+      number_of_deaths = (@population * 0.1).floor
+      speed += 2
+    else 
+      number_of_deaths = (@population * 0.05).floor
+      speed += 2.5
+    end
+
+    print "#{@state} will lose #{number_of_deaths} people in this outbreak and will spread across the state in #{speed} months.\n\n"
+
+  end
+end
 
 #=======================================================================
 
 # DRIVER CODE
  # initialize VirusPredictor for each state
 
+STATE_DATA.each do |state, data| 
+  state = VirusPredictor.new(state, data[:population_density], data[:population], data[:region], data[:regional_spread])
+  state.virus_effects
+end
 
 alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population], STATE_DATA["Alabama"][:region], STATE_DATA["Alabama"][:regional_spread]) 
 alabama.virus_effects
