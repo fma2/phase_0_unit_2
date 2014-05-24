@@ -9,6 +9,47 @@
 
 # Our Refactored Solution
 
+def bakery_num(num_of_people, fav_food)
+  ppl_per_food = {"pie" => 8, "cake" => 6, "cookie" => 1}
+  qty = {"pie" => 0, "cake" => 0, "cookie" => 0}
+  # pie_qty, cake_qty, cookie_qty = 0, 0, 0
+ 
+ raise ArgumentError.new("You can't make that food") if not ppl_per_food.include?(fav_food) #== true #needs to be rewritten
+
+  # has_fave = false
+  ppl_per_food.each_key do |k|
+    if k == fav_food
+      has_fave = true
+      fav_food = k
+    end
+  end
+
+  # 
+# if has_fave == false
+#   raise ArgumentError.new("You can't make that food")
+  # else
+  #   fav_food_qty = ppl_per_food.values_at(fav_food)[0]
+  fav_food_qty = ppl_per_food.values_at(fav_food)[0]
+  if num_of_people % fav_food_qty == 0
+    num_of_food = num_of_people / fav_food_qty
+    "You need to make #{num_of_food} #{fav_food}(s)."
+  else num_of_people % fav_food_qty != 0
+    while num_of_people > 0
+      if num_of_people / ppl_per_food["pie"] > 0
+        qty["pie"] = num_of_people / ppl_per_food["pie"]
+        num_of_people = num_of_people % ppl_per_food["pie"]
+      elsif num_of_people / ppl_per_food["cake"] > 0
+        qty["cake"] = num_of_people / ppl_per_food["cake"]
+        num_of_people = num_of_people % ppl_per_food["cake"]
+      else
+        qty["cookie"] = num_of_people
+        num_of_people = 0
+      end
+    end
+    "You need to make #{qty["pie"]} pie(s), #{qty["cake"]} cake(s), and #{qty["cookie"]} cookie(s)."
+    end
+  end
+# end
 
 
 
@@ -28,7 +69,7 @@ p bakery_num(130, "pie") == "You need to make 16 pie(s), 0 cake(s), and 2 cookie
 # p bakery_num(3, "apples") # this will raise an ArgumentError
 
 # You SHOULD change this driver code. Why? Because it doesn't make sense.
-p bakery_num(41, "cake") == "You need to make 5 pie(s), 0 cake(s), and 1 cookie(s)." # WHAAAAAT? I thought I said I wanted cake!
+p bakery_num(41, "cake") == "You need to make 0 pie(s), 6 cake(s), and 5 cookie(s)." # WHAAAAAT? I thought I said I wanted cake!
 
 
 
