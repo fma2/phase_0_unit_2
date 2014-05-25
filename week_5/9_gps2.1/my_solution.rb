@@ -1,9 +1,6 @@
 # U2.W5: Bakery Challenge GPS
 
-# I worked on this challenge with: 
-
-
-
+# I worked on this challenge with: Stephen Estrada
 
 
 
@@ -85,5 +82,19 @@ p bakery_num(41, "cake") == "You need to make 0 pie(s), 6 cake(s), and 5 cookie(
 
 #  Reflection 
 
+# Though other challenges attest to it, I found this challenge to be the most 
+# blatant example of the need for refactoring.  With such complicated original 
+# code, it took my pair and me some time to be able to explain what the code was 
+# doing overall and within each part.  When we began to refactor, we were able 
+# to make minor changes like removing unnecessary “returns” easily, but we 
+# needed to reassess what was happening in the code overall to be able to 
+# effectively refactor--minor changes did not make it that much more readable, 
+# though I've seen such changes help quite a bit with other refactoring situations.  
 
+# Notably, I found that, unlike other code that I’ve refactored, code blocks and 
+# methods that repeated the same task were not always right next to one another--
+# this unsurprisingly made the task more challenging.  Effectively, it seems 
+# with code like this, I should: figure out what the code is doing overall, 
+# search for and comment out examples of repetitive code and use the refactoring 
+# technique of extract method.
 
