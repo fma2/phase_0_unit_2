@@ -131,3 +131,14 @@ puts invalid_card.check_card == false
 
 
 # 5. Reflection
+
+# I worked on this challenge in a pair.  The provided directions were useful in starting our pseudocode.  Many of the 
+# steps involved having the code do math--in retrospect, pseudocode seems easier to write when explaining how the 
+# code should add, subtract, etc.  It was similarly simple to translate these pseudocode steps to code--so we thought.  
+
+# When we ran the code, we encountered issues with how the elements in the array we created were understood--whether 
+# each was a string or an integer--and with new variables that we wanted to access in a later loop.  What’s more, we 
+# needed these elements to not always be a string or an integer.  For example, to add them together, they needed to 
+# be integers.  However, for the code to find double-digit elements, we needed the elements to be strings.  It was a 
+# problem I had not encountered in previous challenges; I appreciated the time we spent on it in this challenge, as I 
+# will now be more conscious of this in the future.  
