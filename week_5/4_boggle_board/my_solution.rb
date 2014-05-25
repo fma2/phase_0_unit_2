@@ -8,7 +8,7 @@ boggle_board = [["b", "r", "a", "e"],
                 ["t", "a", "k", "e"]]
 
 
-#NO LONGER PART 1
+####NO LONGER PART 1
 # Part 1: Access multiple elements of a nested array 
 # Pseudocode
 # Initial Solution (from directions)
@@ -28,7 +28,7 @@ boggle_board = [["b", "r", "a", "e"],
 #see above
 # DRIVER TESTS GO BELOW THIS LINE
 # Reflection 
-#NO LONGER PART 1
+####NO LONGER PART 1
 
 #-------------------------------------------------------------------------------
 
@@ -97,3 +97,18 @@ p get_column(boggle_board, 2) == ["a", "d", "l", "k"]
 p get_column(boggle_board, 3) == ["e", "t", "r", "e"]
 
 # Reflection 
+
+# In attempting this challenge, I first began thinking I needed to make a 
+# class, since that was the theme for the week.  I wrote pseudocode and 
+# code accordingly; it did not work.  Then, I used simple methods, and it 
+# worked.  Though I was able to acquire the results described by each 
+# release, I still feel like there is something to this challenge I may be 
+# missing.  Amongst many similar moments throughout the past few weeks of 
+# Phase 0, this is one in which I wish I were on-site at DBC, making it 
+# even easier to discuss my solution with others.  I wonder -- though it 
+# covers every answer possible for this particular Boggle Board,  is my 
+# Driver Code adequate?
+
+# Overall, however, I felt I had an adequate grasp of relevant methods for 
+# hashes and arrays.  Previous reading and rereading of Ruby Documentation 
+# allowed me to write code for this challenge without much research. 

@@ -83,11 +83,7 @@ class GuessingGame
 
   def solved?
   	@solved = @guess
-  	if @guess == @answer
-  		true
-  	else 
-  		false
-  	end
+  	@guess == @answer
   end
 end
 
@@ -114,3 +110,18 @@ p game.guess(10) == :correct
 
 
 # 5. Reflection 
+# Like most other challenges, using pseudocode to plan was a useful strategy for this 
+# challenge.  And, because I had practice with writing classes through the previous two #challenges, 
+# I was able to write pseudocode and translate to code with ease.  
+
+# I did struggle briefly, however, with placement of @guess.  Specifically, I initially 
+# included it in the initialize method and as an argument.  However, after looking again at the 
+# driver code and then testing it, I realized that this would cause and caused an argument 
+# error -- there were not enough arguments passed in spec document for the initialize method to 
+# take two arguments.  
+
+# # Also, in my previous research on class, I had not come across examples of if..else methods 
+# in class.  Before including it in this challenge’s code, I look for such examples.  As I have 
+# alluded in other reflections, I look forward to being able to look at a language and know 
+# most of its capabilities--I’m convinced that, while research may help, this will be more 
+# natural after much practice.
