@@ -140,3 +140,20 @@ california.virus_effects
 
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population], STATE_DATA["Alaska"][:region], STATE_DATA["Alaska"][:regional_spread]) 
 alaska.virus_effects
+
+#REFLECTION
+# I worked on this challenge in a pair.   My pair and I were able to read the code and explain what it was doing with 
+# ease.  We found it challenging when it came time to initialize VirusPredictor for each state.  We discussed looping 
+# as an option and began our work with pseudocode.  However, when it came to translating the work into code, we tested
+# , modified, retested, and kept encountering numerous syntax errors.  
+
+# I think we began with a satisfactory plan: to model the information we need for all states after the syntax in each 
+# of the available driver code lines and to consider ways to loop.  However, it took us quite a bit of time to put 
+# plans together sans syntax error.  Conclusively, it seems that I need to practice more with creating an instance of 
+# a class--to see examples of where it can be written in a program, what it might look like if in a loop or another 
+# similar location, etc.  This is because I did not initially consider that we could initiate an instance of the class
+# then call that instance within a loop.
+
+# Overall, this challenge was a great example of a real-world use of ruby.  It is the kind of program I would like to 
+# create for my current full-time job, which often requires I sift through data on education and schools and crunch 
+# numbers and make hypotheses.
