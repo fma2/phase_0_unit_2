@@ -9,48 +9,58 @@
 
 # Our Refactored Solution
 
-def bakery_num(num_of_people, fav_food)
-  ppl_per_food = {"pie" => 8, "cake" => 6, "cookie" => 1}
-  qty = {"pie" => 0, "cake" => 0, "cookie" => 0}
-  # pie_qty, cake_qty, cookie_qty = 0, 0, 0
+# def bakery_num(num_of_people, fav_food)
+#   ppl_per_food = {"pie" => 8, "cake" => 6, "cookie" => 1}
+#   qty = {"pie" => 0, "cake" => 0, "cookie" => 0}
  
- raise ArgumentError.new("You can't make that food") if not ppl_per_food.include?(fav_food)
-  # has_fave = false
-  ppl_per_food.each_key do |k|
-    if k == fav_food
-      has_fave = true
-      fav_food = k
-    end
-  end
+#  raise ArgumentError.new("You can't make that food") if not ppl_per_food.include?(fav_food)
 
-  # 
-# if has_fave == false
-#   raise ArgumentError.new("You can't make that food")
-  # else
-  #   fav_food_qty = ppl_per_food.values_at(fav_food)[0]
-  fav_food_qty = ppl_per_food.values_at(fav_food)[0]
-  if num_of_people % fav_food_qty == 0
-    num_of_food = num_of_people / fav_food_qty
-    "You need to make #{num_of_food} #{fav_food}(s)."
-  else num_of_people % fav_food_qty != 0
-    while num_of_people > 0
-      if num_of_people / ppl_per_food["pie"] > 0
-        qty["pie"] = num_of_people / ppl_per_food["pie"]
-        num_of_people = num_of_people % ppl_per_food["pie"]
-      elsif num_of_people / ppl_per_food["cake"] > 0
-        qty["cake"] = num_of_people / ppl_per_food["cake"]
-        num_of_people = num_of_people % ppl_per_food["cake"]
-      else
-        qty["cookie"] = num_of_people
-        num_of_people = 0
-      end
-    end
-    "You need to make #{qty["pie"]} pie(s), #{qty["cake"]} cake(s), and #{qty["cookie"]} cookie(s)."
-    end
-  end
+#   ppl_per_food.each_key do |k|
+#     if k == fav_food
+#       has_fave = true
+#       fav_food = k
+#     end
+#   end
+#   fav_food_qty = ppl_per_food.values_at(fav_food)[0]
+#   if num_of_people % fav_food_qty == 0
+#     num_of_food = num_of_people / fav_food_qty
+#     "You need to make #{num_of_food} #{fav_food}(s)."
+#   else num_of_people % fav_food_qty != 0
+#     while num_of_people > 0
+#       if num_of_people / ppl_per_food["pie"] > 0
+#         qty["pie"] = num_of_people / ppl_per_food["pie"]
+#         num_of_people = num_of_people % ppl_per_food["pie"]
+#       elsif num_of_people / ppl_per_food["cake"] > 0
+#         qty["cake"] = num_of_people / ppl_per_food["cake"]
+#         num_of_people = num_of_people % ppl_per_food["cake"]
+#       else
+#         qty["cookie"] = num_of_people
+#         num_of_people = 0
+#       end
+#     end
+#     "You need to make #{qty["pie"]} pie(s), #{qty["cake"]} cake(s), and #{qty["cookie"]} cookie(s)."
+#   end
 # end
 
 
+def bakery_num(num_of_people, fav_food)
+ my_list = {'pie' => 8, 'cake' => 6, 'cookie' => 1}
+
+ has_fav = my_list.include?(fav_food)
+ if !has_fav
+   raise ArugmentError.new("You can't make that food.")
+ end
+
+ fav_food_qty = my_list[fav_food]
+ if num_of_people % fav_food_qty == 0
+   num_of_food = num_of_people / fav_food_qty
+   "You need to make #{num_of_food} #{fav_food}(s)."
+ end
+ pie_qty = num_of_people / my_list["pie"]
+ cake_qty = (num_of_people % my_list["pie"]) / my_list["cake"]
+ cookie_qty = (num_of_people % my_list["pie"] % my_list["cake"]) / my_list["cookie"]
+ "You need to make #{pie_qty} pie(s), #{cake_qty} cake(s), and #{cookie_qty} cookie(s)."
+end
 
 
 
