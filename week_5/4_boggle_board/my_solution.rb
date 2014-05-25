@@ -65,6 +65,7 @@ p get_row(boggle_board, 3) == ["t", "a", "k", "e"]
 # Reflection 
 
 
+<<<<<<< HEAD
 #-------------------------------------------------------------------------------
 
 # Part 3: Now write a method that takes a column number and returns all the elements in the column.
@@ -112,3 +113,5 @@ p get_column(boggle_board, 3) == ["e", "t", "r", "e"]
 # Overall, however, I felt I had an adequate grasp of relevant methods for 
 # hashes and arrays.  Previous reading and rereading of Ruby Documentation 
 # allowed me to write code for this challenge without much research. 
+=======
+>>>>>>> FETCH_HEAD
