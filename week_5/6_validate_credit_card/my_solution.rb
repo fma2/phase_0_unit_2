@@ -126,7 +126,7 @@ puts valid_card.check_card == true
 invalid_card = CreditCard.new(4408041234567892)
 puts invalid_card.check_card == false
 
-
+# error_card = CreditCard.new(1234) # => raises ArgumentError
 
 
 
