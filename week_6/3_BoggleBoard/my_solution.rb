@@ -1,7 +1,7 @@
 # U2.W6: Create a BoggleBoard Class
 
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge with Daniel Deepak.
 
 
 # 2. Pseudocode
