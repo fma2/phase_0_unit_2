@@ -85,21 +85,15 @@ end
 # DRIVER TESTS GO BELOW THIS LINE
 
 valid_card = CreditCard.new(4408041234567893)
-def assert_true(card_num)
-	true if valid_card.check_card == true
-end
-
 invalid_card = CreditCard.new(4408041234567892)
-def assert_false(card_num)
- 	true if invalid_card.check_card == false
+
+def assert
+  raise "Exception raised!" unless yield
 end
 
-error_card = CreditCard.new(4408041234567892)
-def assert_error(card_num)
-	raise ArgumentError.new("Card must be 16 digits") if card_num.to_s.length != 16
-end
-assert_error(4408041234567893)
-# assert_error(1) => Raises Argument Error
+assert {valid_card.check_card}
+assert {invalid_card.check_card == false}
+
 
 
 # Reflection 
