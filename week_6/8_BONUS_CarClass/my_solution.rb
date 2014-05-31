@@ -1,10 +1,14 @@
 # U2.W6: Create a Car Class from User Stories
 
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge with Justin Lee.
 
 
 # 2. Pseudocode
+
+# Attributes: model, color, distance, speed, total distance traveled, output
+
+# Methods: turn left and right, acceleration and deceleration, stopping and starting
 
 # class Car
 
@@ -115,12 +119,12 @@ class Car
   
   def get_pizza(pizza = @insulated_compartment.first)
     @insulated_compartment.delete(pizza)
-    "Here is your #{pizza.type} pizza."
+    "Here is your #{pizza.type} #{pizza.specialization} pizza."
   end
   
   def see_all_pizza
     puts "The insulated compartment contains:"
-    @insulated_compartment.each {|pizza| puts "- " + pizza.type }
+    @insulated_compartment.each {|pizza| puts "- " + " #{pizza.type} #{pizza.specialization} pizza" }
   end
   
   def pizza_count
@@ -140,29 +144,29 @@ class Directions
   def drive(miles, speed)
     @distance = @distance + miles
     @speed = speed
-    return "You drove your car #{@distance} miles at #{@speed} MPH."
+    "You drove your car #{miles} miles at #{@speed} MPH."
   end
   
   def speed
-    return "You are driving #{@speed} MPH."
+    "You are driving #{@speed} MPH."
   end
   
   def turn_at_stop(direction)
-    return "You stopped at a stop sign and turned #{direction}."
+    "You stopped at a stop sign and turned #{direction}."
   end
   
   def change_speed(amount_change)
     @speed = @speed + amount_change
-    return "You changed your speed to #{@speed} MPH."
+    "You changed your speed to #{@speed} MPH."
   end
   
   def total_distance
-    return "You have traveled #{@distance} miles."
+    "You have traveled #{@distance} miles."
   end
   
   def stop
     @speed = 0
-    return "You have arrived at your destination."
+    "You have arrived at your destination."
   end
   
 end
@@ -170,11 +174,11 @@ end
 class Pizza
   
   # Menu
-  # Type of pizza = Margherita, Deep dish, New York-style
-  # Specialization = Gluten-free, Vegan, Vegeterian
+  # Type of pizza = Deep dish, New York-style 
+  # Specialization = Margherita, Gluten-free, Vegan, Vegeterian
   # Toppings = Pepperoni, Mushrooms, Onions, Sausage, Bacon, Extra cheese, Black olives, Green peppers, Pineapple, Spinach
   
-  attr_reader :type
+  attr_reader :type, :specialization
   
   def initialize(type)
     @type = type
@@ -187,14 +191,15 @@ class Pizza
   end
   
   def add_specialization(specialization)
-    specialization
+    @specialization = specialization
   end
   
 end
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
 cheese_pizza = Pizza.new("New York-style")
-cheese_pizza.add_toppings("Cheese")
+cheese_pizza.add_toppings("Extra cheese")
+cheese_pizza.add_specialization("Margherita")
 
 player_one_car = Car.new("Beetle", "Yellow", cheese_pizza)
 player_one_car_directions = Directions.new(player_one_car)
