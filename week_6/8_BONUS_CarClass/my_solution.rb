@@ -231,3 +231,28 @@ player_one_car.see_all_pizza # => vegetarian_pizza
 
 
 # 5. Reflection 
+
+# I worked on this challenge in a pair.  Unlike a few of 
+# the other challenges from this week, this one required 
+# that we write all parts--pseudocode, initial code, 
+# refactoring, and driver code.  With this in mind, upon 
+# reviewing the code, I am excited to see that all of it 
+# is our work.  
+
+# From the user stories, we were able to identify the 
+# attributes and methods.  We used the lists we made for 
+# each to make two different classes -- class Car and class
+# Directions.  We justified this decision after discussing 
+# how, in the real world, two different users may use the 
+# video game and want two different cars, and all cars 
+# will have the same possibilities with directions.  I am 
+# not sure how often user stories’ attributes and methods 
+# will neatly break up into two classes, but I appreciated 
+# that it seemed to work this way with this challenge.  
+
+# This challenge gave me more understanding of writing 
+# discernable variables and attending to a variable’s scope
+# .  In trying to make the code run and then print 
+# correctly, my pair and I changed arguments for methods, 
+# rewrote variable names, and considered ways to call 
+# parts of an initialized instance of a class.
