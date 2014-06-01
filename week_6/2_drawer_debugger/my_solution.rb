@@ -149,3 +149,14 @@ spoon2.eat == "eating with the spoon_2"
 
 
 # 5. Reflection 
+
+# I appreciated this challenge, as it gave me practice reading code and driver code and then debugging
+# , all for the same program--in previous challenges, I recall focusing mostly on one of the two.  
+# Further, the code is a good example of the object-oriented programming I have been reading about in 
+# POODR.  Each method as only one function, and I enjoyed reading the code because of this simplicity-
+# -it made it easier to figure out what was going on, a task I found harder with functional 
+# programming code.  
+
+# From this challenge, I learned how two classes can interact with one another.  Having to refer to 
+# error messages to correct syntax supported this learning--because I was not used to seeing two 
+# classes, I was even more attentive to the information provided in the error messages.  

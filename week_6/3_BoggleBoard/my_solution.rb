@@ -101,3 +101,19 @@ p boggle_board_test.get_diagonal([0,0], [1,1], [2,2], [3,3]) == ["b","o","l","e"
 
 
 # 5. Reflection 
+
+# I worked on this challenge in a pair.  I enjoyed that we were able to go back to last week’s work 
+# and expand upon it--this practice reminded me of and deepened my learnings from last week.  
+# Interestingly, when I first attempted the Boggle Board challenge last week, I tried to make a Class 
+# but felt I was making the task more complicated than necessary and changed my solutions to methods.  
+
+# Further, this challenge allowed me to expand upon my understandings of variables in classes.  My 
+# pair and I initially included “board” as an argument in the methods get_row and get_column but 
+# quickly found it unnecessary--we had called :board with attr_reader.  In terms of learning 
+# competencies, this process of trial-and-error involved identifying when to use instance variables.
+
+# In writing the driver code, our syntax for create_word and get_diagonal was not easy to write.  We 
+# had trouble with including parentheses and brackets in the right spots.  I believe this was because 
+# I did not have inexperience with using coordinates when calling a method; now that I know it is 
+# possible to use coordinates when calling a method, I will be more comfortable doing so in the future
+# .  

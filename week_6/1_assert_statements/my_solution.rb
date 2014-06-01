@@ -86,3 +86,16 @@ assert {invalid_card.check_card == false}
 
 
 # 5. Reflection
+
+# I ended up doing this challenge twice.  The first time that I completed it, 
+# #I wrote assert statements almost identical to the “bettysue” statements.  
+# When attempting Challenge 5, I realized that the statements I had written for 
+# Challenge 1 did not actually test the functionality of the class, so I 
+# returned to this challenge to edit my work.  Truth be told, I am not 
+# completely comfortable with assert statement syntax.  I researched how it 
+# works, and I believe it confused me even more.  The documentation described 
+# the different ways to write assert statements and the arguments they take but 
+# did not look similar to the code I used in this challenge.  In terms of the 
+# learning competencies, I was able to translate this particular driver code 
+# into assert statements, but I cannot confidently say I will be able to do it 
+# easily with other driver code.  
