@@ -177,3 +177,16 @@ my_playlist.display
 
 
 # Reflection 
+
+# I enjoyed using driver code to write code in this challenge.  It did take me a few extra minutes to
+# realize that the instances created for the class Song did not call two different songs; rather, 
+# they called a song and its artist.  It helped that, in addition to expectations established in 
+# earlier Week 6 challenges, I was reading about single function methods in POODR when I began this 
+# challenge.  Unlike many other times, I was confident while writing the pseudocode and code for this 
+# challenge that I was on the right track (pun, intended).
+
+# One unexpected learning from this challenge was how instances of a class look when printed--there 
+# is an ID and brackets that make it strange when printed into a string.  Seeing this I realized how 
+# valuable attr_reader can be; I used attr_reader to call the information stored in a variable in a 
+# class.  Regardless of this exposure and practice, I know I still need to learn more about class IDs 
+# and attr_reader.
